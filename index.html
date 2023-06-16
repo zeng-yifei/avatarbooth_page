@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="High-Quality and Customizable 3D Human Avatar Generation">
+  <meta name="keywords" content="AvatarBooth, Text-to-3D">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>AvatarBooth: High-Quality and Customizable 3D Human Avatar Generation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -52,7 +52,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://github.com/zeng-yifei">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -63,18 +63,16 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
+          <a class="navbar-item" href="https://github.com/zeng-yifei/AvatarBooth">
+            AvatarBooth
           </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
+          <a class="navbar-item" href="https://github.com/hongfz16/AvatarCLIP">
+            AvatarCLIP
           </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
+          <a class="navbar-item" href="https://github.com/ashawkey/stable-dreamfusion">
+            Stable-DreamFusion
           </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
+
         </div>
       </div>
     </div>
@@ -91,22 +89,27 @@
           <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://github.com/zeng-yifei">Yifei Zeng</a><sup>1</sup>,</span>
+            <a href="https://github.com/zeng-yifei">Yifei Zeng</a><sup>1</sup>,</span>
+              <span class="author-block">
+              <a href="https://github.com/YuanxunLu">Yuanxun Lu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="http://zhuhao.cc/">Hao Zhu</a><sup>2</sup>,</span>
+                <a href="https://github.com/jixinya">Xinya Ji</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://cite.nju.edu.cn/People/Faculty/20190621/i5054.html">Xun Cao</a><sup>2</sup>,
+                <a href="https://yoyo000.github.io/">Yao Yao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="http://zhuhao.cc/">Hao Zhu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://cite.nju.edu.cn/People/Faculty/20190621/i5054.html">Xun Cao</a><sup>1</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Xidian University,</span>
-            <span class="author-block"><sup>2</sup>Nanjing University (The work is done during Yifei Zeng makes his graduate design in Nanjing University)</span>
+            <span class="author-block"><sup>1</sup>Nanjing University </span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
+              <!-- PDF Link. TODO -->
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -125,7 +128,7 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
+              <!-- Video Link. TODO-->
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
@@ -137,23 +140,15 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/zeng-yifei/AvatarBooth"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code(To be released)</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
+
             </div>
 
           </div>
@@ -173,7 +168,7 @@
       <h2 class="subtitle has-text-centered">
         <span class="dnerf">AvatarBooth</span> is a text-2-3D model. It creates an animatable 3D model with your word description. 
           Also, it can generate customized model with 4~6 photos from your phone or a character design generated from diffusion model. 
-          You can play with any magic words to change your final result.
+          You can play with any magic words to change your final character result with fixed identity.
       </h2>
     </div>
   </div>
@@ -186,40 +181,77 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/0075-0078.webm"
+            <source src="./static/videos/obama.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/hulk_normal.mp4"
+            <source src="./static/videos/hilary.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/strange.mp4"
+            <source src="./static/videos/kobe.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/strange_normal.mp4"
+            <source src="./static/videos/messi.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ronald.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/elsa.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/luke.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/superman.mp4"
                     type="video/mp4">
           </video>
-
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/superman_normal.mp4"
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/aragon.mp4"
                     type="video/mp4">
           </video>
         </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/deadpool.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/doctor.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/godfather.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
 
       </div>
     </div>
@@ -235,24 +267,26 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present a novel method for generating personalized avatars from text descriptions, 
-            utilizing as few as 4~6 personal photos or a naive character design.
-            It can also produce vivid 3D Avatar with some word description as a Text-to-3D model.
+            We introduce AvatarBooth, a novel method for generating high-quality 3D avatars using text prompts or specific images.
+             Unlike previous approaches that can only synthesize avatars based on simple text descriptions, 
+             our method enables the creation of personalized avatars from casually captured face or body images, 
+             while still supporting text-based model generation and editing. 
+             Our key contribution is the precise avatar generation control by using dual fine-tuned diffusion models separately 
+             for the human face and body. This enables us to capture intricate details of facial appearance,
+            clothing, and accessories, resulting in highly realistic avatar generations.
           </p>
           <p>
-            Our approach leverages recent advancements in personalizing diffusion models and text-to-3D techniques. 
-            We address the issue of overfitting and inconsistent mesh geometry and visual results in existing finetune methods, 
-            such as LoRA or DreamBooth, by adapting ControlNet to produce multi-view photos with similar identity. 
-            This allows us to train a personalized text-to-3D Avatar model in a single stage. 
-            Our method employs a neural implicit field and a distillation loss to generate avatars with high-quality geometry and texture, 
-            through a simple yet effective pipeline.
+            Furthermore, we introduce pose-consistent constraint to the optimization process to enhance the multi-view consistency 
+            of synthesized head images from the diffusion model and thus eliminate interference from 
+            uncontrolled human poses. In addition, we present a multi-resolution rendering strategy that 
+            facilitates coarse-to-fine supervision of 3D avatar generation, thereby enhancing the performance 
+            of the proposed system. The resulting avatar model can be further edited using additional text 
+            descriptions and driven by motion sequences.
           </p>
           <p>
-            We demonstrate that our <span class="dnerf">AvatarBooth</span> can transform casually captured photos into 3D models 
-            that are suitable for animation. Furthermore, our approach outperforms existing text-to-3D methods,
-             achieving superior results in terms of avatar quality and fidelity to the input text description. 
-             Our method represents a significant advancement in generating personalized avatars from text, 
-             offering a promising solution for applications in virtual reality, gaming, and entertainment industries.
+            Experiments show that <span class="dnerf">AvatarBooth</span> outperforms previous text-to-3D methods in terms of
+             rendering and geometric quality from either text prompts or specific images. 
+             The code and model will be made available upon publication.
         
           </p>
         </div>
@@ -288,10 +322,7 @@
             Using <i>AvatarBooth</i> you can create high-quality avatar through a few words. 
             The model both have a satisfying appearance and a detailed mesh.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
+          <img src="./static/images/exhibit.jpg" alt="Text-to-Avatar">
         </div>
       </div>
 
@@ -300,33 +331,15 @@
         <div class="content">
           <h2 class="title is-3">Character Personalization</h2>
           <p>
-            Another <i>AvatarBooth</i> application is that you can create your own model using your personal photos. 
+            Another <i>AvatarBooth</i> application is that you can create your own model using your personal photos, including selfies and clothes photos. 
             You can add any accessories or effect to your model output using simply a word description.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
+          <img src="./static/images/exhibit_mode23.jpg" alt="Character Personalization">
         </div>
       </div>
       <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Character Design</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also leverage the character design generated from Stable Diffusion to create 3D model.
-              You can keep modifying your prompt until getting a favourate character design, and then use AvatarBooth to turn it into 3D!
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
+      
       </div>
     </div>
     <!--/ Matting. -->
@@ -342,36 +355,29 @@
           <p>
             We can also animate the model by turning it into a FBX file.
             Feel free to play with the model.
-            You can also import the output model into Mixamo to rig it with endless motions.
+
           </p>
         </div>
 
         <br/>
         <!--/ Interpolating. -->
         <video id="matting-video" controls playsinline height="100%">
-          <source src="./static/videos/matting.mp4"
+          <source src="./static/videos/messi_kick.webm"
                   type="video/mp4">
         </video>
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Animation with Diffusion</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">the trained DreamBooth model</span>, you can re-render the animated video with Stable Diffusion.
-            You can now leverage the magic of T2I diffusion model to produce video of different styles. 
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
+        <video id="matting-video" controls playsinline height="100%">
+          <source src="./static/videos/trump_dance.webm"
+                  type="video/mp4">
+        </video>
+        
+        You can also import the output model into Mixamo to rig it with endless motions.
+        <video id="matting-video" controls playsinline height="100%">
+          <source src="./static/videos/animation.mp4"
+                  type="video/mp4">
+        </video>
+
+
+
 
       </div>
     </div>
@@ -388,18 +394,13 @@
             There's a lot of excellent work that was introduced around the same time as ours.
           </p>
           <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+            <a href="https://avatar-craft.github.io/">AvatarCraft</a> also uses NeuS for 3D representation. 
           </p>
+
           <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
+            Some works model avatars with Latent-NeRF, such as <a href="https://yukangcao.github.io/DreamAvatar/">DreamAvatar</a>
           </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+
         </div>
       </div>
     </div>
@@ -408,18 +409,7 @@
   </div>
 </section>
 
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
-  </div>
-</section>
+<!--/TODO: insert citation. -->
 
 
 <footer class="footer">
@@ -429,7 +419,7 @@
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/zeng-yifei" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -442,11 +432,9 @@
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Thanks for Nerfie for release their project page code. We borrow their <a
+              href="https://github.com/nerfies/nerfies.github.io">website code</a> to construct this website.
+            
           </p>
         </div>
       </div>
